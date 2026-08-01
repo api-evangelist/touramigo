@@ -1,0 +1,28 @@
+{
+  "repo": "touramigo",
+  "feeds": [
+    {
+      "source": "https://www.touramigo.com/blog-feed.xml",
+      "feed_url": "https://www.touramigo.com/blog-feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
+    },
+    {
+      "source": "https://touramigo.com",
+      "feed_url": "https://www.touramigo.com/blog-feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    },
+    {
+      "source": "https://www.touramigo.com/blog",
+      "feed_url": "https://www.touramigo.com/blog-feed.xml",
+      "title": "",
+      "saved": 0,
+      "method": "discovered"
+    }
+  ],
+  "post_count": 20,
+  "fetched": "2026-08-01T15:49:00Z"
+}

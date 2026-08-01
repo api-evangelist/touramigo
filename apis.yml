@@ -1,7 +1,14 @@
 aid: touramigo
 name: TourAmigo
-description: TourAmigo is a company surfaced as a portfolio company of 500-global and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Tour Amigo is a cloud-based booking and operations platform for multi-day
+  tour operators, destination management companies (DMCs), and river and
+  expedition cruise operators. The platform covers itinerary building,
+  supplier and contract management, direct online selling, agent and customer
+  portals, financial management with native Xero integration, and an
+  API-powered channel manager that distributes tours to partners such as
+  GetYourGuide, TourRadar, and Tourhub. Backed by 500 Global, with core
+  markets in Australia, New Zealand, and Europe.
 url: https://raw.githubusercontent.com/api-evangelist/touramigo/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,12 +16,53 @@ x-backed-by:
 - 500-global
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Unknown
+  confidence: low
+  source: []
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-21'
 tags:
-- Company
-apis: []
+- Travel
+- Tours
+- Booking
+- Tour Operators
+- Cruises
+- Destination Management
+- Channel Manager
+- SaaS
+image: https://static.wixstatic.com/media/e37235_1fe7930ec2c0433cb4e114417ca420ca~mv2.png
+apis:
+- name: Tour Amigo Partner API
+  description: >-
+    Tour Amigo's bookable two-way partner API powers its API-powered channel
+    manager. Operators expose tours, availability, and bookings either
+    directly to their own distribution partners or through Tour Amigo's
+    partner network of travel agents and OTAs (GetYourGuide, TourRadar,
+    Tourhub, and others). Access is partner-gated - api.touramigo.com
+    redirects all paths to a login page and no public API reference or
+    machine-readable spec is published.
+  humanURL: https://www.touramigo.com/channel-manager
+  baseURL: https://api.touramigo.com
+  tags:
+  - Tours
+  - Bookings
+  - Availability
+  - Distribution
+  - Channel Manager
+x-enrichment:
+  date: '2026-07-21'
+  status: enriched
+  artifacts_added: 3
+  pass: local-v1
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -23,3 +71,25 @@ maintainers:
 common:
 - type: Website
   url: https://touramigo.com
+- type: Blog
+  url: https://www.touramigo.com/blog
+- type: BlogRSS
+  url: https://www.touramigo.com/blog-feed.xml
+- type: Pricing
+  url: https://www.touramigo.com/pricing
+- type: PrivacyPolicy
+  url: https://www.touramigo.com/privacy-policy
+- type: Support
+  url: https://www.touramigo.com/faq
+- type: Contact
+  url: https://www.touramigo.com/contact
+- type: Login
+  url: https://hermes.touramigo.com/
+- type: GitHubOrganization
+  url: https://github.com/touramigo
+- type: LLMsTxt
+  url: llms/touramigo-llms.txt
+- type: WellKnown
+  url: well-known/touramigo-well-known.yml
+- type: DomainSecurity
+  url: security/touramigo-domain-security.yml

@@ -1,0 +1,57 @@
+generated: '2026-07-21'
+method: searched
+source: live probe of touramigo.com hosts
+notes: >-
+  No /.well-known discovery documents are published on any TourAmigo host.
+  www.touramigo.com is a Wix-hosted site that returns 400 for /.well-known
+  paths; api.touramigo.com (the partner API host) redirects every path,
+  including /.well-known/*, to its /login page (302); hermes.touramigo.com
+  (the operator application) returns 404. The provider does publish an
+  llms.txt at the site root (see llms/touramigo-llms.txt).
+hosts:
+  - host: https://www.touramigo.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 400
+      - path: /.well-known/openid-configuration
+        status: 400
+      - path: /.well-known/oauth-authorization-server
+        status: 400
+      - path: /.well-known/api-catalog
+        status: 400
+      - path: /.well-known/ai-plugin.json
+        status: 400
+      - path: /llms.txt
+        status: 200
+        file: ../llms/touramigo-llms.txt
+  - host: https://api.touramigo.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 302
+        redirect: https://api.touramigo.com/login
+      - path: /.well-known/openid-configuration
+        status: 302
+        redirect: https://api.touramigo.com/login
+      - path: /.well-known/oauth-authorization-server
+        status: 302
+        redirect: https://api.touramigo.com/login
+      - path: /.well-known/api-catalog
+        status: 302
+        redirect: https://api.touramigo.com/login
+      - path: /.well-known/ai-plugin.json
+        status: 302
+        redirect: https://api.touramigo.com/login
+  - host: https://hermes.touramigo.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /llms.txt
+        status: 404
