@@ -10,6 +10,8 @@ description: >-
   GetYourGuide, TourRadar, and Tourhub. Backed by 500 Global, with core
   markets in Australia, New Zealand, and Europe.
 url: https://raw.githubusercontent.com/api-evangelist/touramigo/refs/heads/main/apis.yml
+x-api-posture: no-product-api
+x-api-posture-basis: observed
 x-type: company
 x-source: vc-portfolio
 x-backed-by:
