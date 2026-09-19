@@ -76,6 +76,12 @@ apis:
   baseURL: https://api.touramigo.com
   tags:
   - Tours
+  - Booking
+  - Availability
+  - Distribution
+  - Channel Manager
+  tags_raw:
+  - Tours
   - Bookings
   - Availability
   - Distribution
